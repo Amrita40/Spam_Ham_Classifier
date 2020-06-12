@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style>
+		body{
+			font:15px/1.5 Arial, Helvetica,sans-serif;
+			padding: 0px;
+			background-color:#f4f3f3;
+		}
+		.container{
+			width:100%;
+			margin: auto;
+			overflow: hidden;
+		}
+		
+		header{
+			background:#03A9F4;
+			border-bottom:#448AFF 3px solid;
+			height:120px;
+			width:100%;
+			padding-top:30px;
+		
+		}
+		
+		#brandname{
+			float:left;
+			font-size:30px;
+			color: #fff;
+			margin: 10px;
+		}
+		
+		header h2{
+			text-align:center;
+			color:#fff;
+		
+		}
+		
+		.results{
+			border-radius: 15px 50px;
+			background: #345fe4;
+			padding: 20px; 
+			width: 200px;
+			height: 150px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+			<div id="brandname">
+				ML App
+			</div>
+			<h2>Spam Detector For SMS Messages</h2>
+
+		</div>
+	</header>
+	<p style="color:black;"><b>Results for Comment</b></p>
+	<div class="results">
+		{% if prediction == 1%}
+		<h2 style="color:red;">Spam:The message may be a spam.Be aware of the message.</h2>
+		{% elif prediction == 0%}
+		<h2 style="color:rgb(27, 248, 38);">Ham:The message may be important.</h2>
+		{% endif %}
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detector</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset  */
+        body {
+            font-family: 'Baloo Bhai 2', cursive;
+            color:black;
+            margin: 0px;
+            padding: 0px;
+            background: url('/static/cover.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+            overflow: hidden
+        }
+
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 50px;
+            top: 75px;
+        }
+
+        .left img {
+            width: 150px;
+            text-align: center;
+        }
+
+        .left div {
+            line-height: 25px;
+            text-align: left;
+            margin: 6px auto;
+        }
+
+        .container {
+            padding: 200px 120px;
+            margin: 150px 5px;
+            width: 44%;
+            height: 244px;
+            font-size: 15px;
+        }
+
+        .container h1,
+        h3 {
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .form-group textarea {
+            font-family: 'Baloo Bhai 2', cursive;
+            border-radius: 10px;
+            text-align: center;
+            display: block;
+            width: 300px;
+            height: 100px;
+            padding: 0px;
+            font-size: 15px;
+            border: 2px solid black;
+            margin: 10px auto;
+        }
+
+        .container button {
+            display: block;
+            width: 10%;
+            margin: auto;
+            height: 25px;
+            font-size: 10px;
+            padding: 0px;
+            border-radius: 9px;
+
+        }
+
+        .btn {
+            font-family: 'Baloo Bhai 2', cursive;
+            margin: 0px 9px;
+            background-color: black;
+            color: white;
+            padding: 4px 14px;
+            border: 2px grey solid;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: brown;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="/static/AT.jpg" alt="Problem with image file">
+            <div><b>Amrita Thakur</b>
+                <br>
+                <b>Data Science Enthusiast</b>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Machine Learning App with Flask </h1>
+        <h3>Spam Detector For Email Messages</h3>
+        <div class="form-group">
+            <form action="{{url_for('predict')}}" method="POST">
+				<textarea name="message" rows="6" cols="50"></textarea>
+                <button class="btn">PREDICT</button>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
